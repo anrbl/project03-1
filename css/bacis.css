@@ -1,0 +1,64 @@
+.sec {
+    padding: 110px 0;
+    word-break: keep-all;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px
+}
+
+.sec .title {
+    max-width: 1200px;
+    margin: 0 auto 28px auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.sec .title h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.sec .title p {
+    word-break: keep-all;
+    font-size: 15px;
+    line-height: 19px;
+    color: #444;
+}
+
+.hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+
+/* 헤더 */
+.header a {
+    display: block;
+}
+
+
+/* main */
+.main_visual .slogan p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 300;
+    padding: 0 0 0 4px;
+    margin: 0 0 8px 0;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.main_visual .slogan h3 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}

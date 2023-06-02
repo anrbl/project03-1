@@ -1,0 +1,949 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 900;
+}
+
+.header .head_warp {
+    display: flex;
+    height: 80px;
+    line-height: 80px;
+    white-space: nowrap;
+}
+
+.header h1 {
+    height: 60px;
+}
+
+.header .gnb {
+    margin: 0 0 0 auto;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 50px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.header .gnb>ul>li~li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 15px;
+    background: #ddd;
+}
+
+
+/* -----------------------헤더 : 메뉴 - sub */
+.header .sub {
+    height: 0;
+    overflow: hidden;
+
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+
+    text-align: center;
+    width: 120px;
+    line-height: 43px;
+
+    word-break: keep-all;
+
+    transition: 0.5s;
+}
+
+.header .gnb:hover>ul>li .sub {
+    height: 280px;
+}
+
+.header .gnb::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-top: 1px solid #ddd;
+    background: #fff;
+    z-index: 990;
+    transition: 0.5s;
+}
+
+.header .gnb:hover::before {
+    height: 280px;
+    box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.2);
+}
+
+
+/* -----------------------헤더 메뉴 : 마우스오버 효과 */
+.header .gnb>ul>li:hover {
+    color: #f60;
+    font-weight: 700;
+}
+
+.header .sub>li {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+
+.header .sub>li:hover {
+    color: #f60;
+}
+
+/* .header .sub>li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    transform: translate(-100%, 0);
+
+    width: 100%;
+    height: 2px;
+    background: #f60;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.header .sub>li:hover::after {
+    transform: translate(0, 0);
+    opacity: 1;
+} */
+
+/* 헤더:서비스 */
+.header .service {
+    margin: 0 0 0 70px;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.header .service>a>i {
+    color: #333;
+    transition: 0.3s;
+}
+
+.header .service>a:hover>i {
+    color: #f60;
+}
+
+
+
+
+
+
+
+/* 🥼 MAIN */
+/* -----------------------
+메인 슬라이드 : main_visual 
+-----------------------*/
+.main_visual {
+    position: relative;
+}
+
+.main_visual .main_slide .itm {
+    position: relative;
+    height: calc(100vh - 80px);
+}
+
+.main_visual .main_slide .itm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 27%, rgba(255, 255, 255, 0) 60%);
+}
+
+.main_visual .main_slide .itm01 {
+    background: url(../images/mainslide01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slide .itm02 {
+    background: url(../images/mainslide04.jpg) no-repeat bottom center/cover;
+}
+
+.main_visual .main_slide .itm03 {
+    background: url(../images/mainslide03.png) no-repeat top center/cover;
+}
+
+.main_visual .main_slide .itm04 {
+    background: url(../images/mainslide02.jpg) no-repeat top center/cover;
+}
+
+.main_visual .slogan {
+    position: absolute;
+    bottom: 260px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
+}
+
+.main_visual .slogan .txt {
+    position: relative;
+}
+
+.main_visual .slogan .txt::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 70px;
+    height: 2px;
+    background: #f60;
+}
+
+
+/* ----------------------- 메인슬라이드 버튼이동 */
+.main_visual .dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    user-select: none;
+
+    display: flex;
+    gap: 30px;
+    width: 1170px;
+
+    background: #fff;
+    border-radius: 15px 15px 0 0;
+}
+
+.main_visual .dots li {
+    position: relative;
+    flex: 1;
+    padding: 30px 15px 47px 15px;
+}
+
+.main_visual .dots li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 100px;
+    background: #ddd;
+}
+
+.main_visual .dots li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 4px;
+    background: #f60;
+}
+
+.main_visual .dots li.on::after {
+    width: 80%;
+    transition: 4s;
+}
+
+.main_visual .dots .btn {
+    cursor: pointer;
+    text-align: center;
+}
+
+.main_visual .dots .btn strong {
+    display: block;
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.main_visual .dots .btn p {
+    font-weight: 300;
+    color: #666;
+}
+
+.main_visual .dots li.on .btn strong {
+    font-weight: 500;
+    color: #f60;
+    transition: 0.5s;
+}
+
+.main_visual .dots li.on .btn p {
+    color: #333;
+    font-weight: 400;
+}
+
+/* ----------------------- 버튼 */
+.main_visual .arrow {
+    color: #fff;
+    font-size: 30px;
+}
+
+.main_visual .arrow .left {
+    position: absolute;
+    bottom: 268px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 0 0 0 -350px;
+}
+
+.main_visual .arrow .right {
+    position: absolute;
+    bottom: 268px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 0 0 0 350px;
+}
+
+/* ----------------------- 스크롤다운 */
+.main_visual .scr {
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.main_visual .scr::before {
+    content: '';
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 25px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+}
+
+.main_visual .scr::after {
+    content: '';
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+    animation: sdown 1.5s infinite;
+}
+
+@keyframes sdown {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 15px);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+
+
+
+
+
+/* -----------------------
+main_content : 무슨 사업을 하는지 설명합니다 
+-----------------------*/
+/* .main_content {
+    background: #f9f9f9;
+} */
+
+.main_content .title {
+    position: relative;
+    margin: 0 auto 80px auto;
+}
+
+.main_content .title::before {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 150px;
+    height: 2px;
+    background: #f60;
+}
+
+.main_content .content {
+    display: flex;
+    gap: 30px;
+}
+
+.main_content .content>* {
+    flex: 1;
+}
+
+.main_content .content figure {
+    position: relative;
+    border: 1px solid #ddd;
+    filter: grayscale(0.9);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.main_content .content figure:hover {
+    filter: grayscale(0);
+}
+
+.main_content .content figure .box {
+    overflow: hidden;
+}
+
+.main_content .content figure .box img {
+    transition: 0.5s;
+}
+
+.main_content .content figure:hover .box img {
+    transform: scale(1.2);
+}
+
+.main_content .content figure figcaption {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+
+    width: 100%;
+    height: 58px;
+    background: rgba(255, 255, 255, 1);
+    transition: 0.5s;
+}
+
+.main_content .content figure:hover figcaption {
+    height: 100px;
+}
+
+.main_content .content strong {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.main_content .content figure:hover strong {
+    font-size: 24px;
+    color: #f60;
+    font-weight: 700;
+}
+
+.main_content .content figure a {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transition: 0.5s;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
+}
+
+.main_content .content figure:hover a {
+    transform: translate(-50%, 70%);
+    z-index: 999;
+    opacity: 1;
+}
+
+.main_content .content a::after {
+    content: "\e943";
+    font-family: xeicon;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transition: 0.5s;
+
+    font-size: 20px;
+    color: #fff;
+    opacity: 0;
+}
+
+.main_content .content figure:hover a::after {
+    transform: translate(-50%, 70%);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* -----------------------
+main_introvideo 비디오 영상컨텐츠 배치 
+-----------------------*/
+.main_introvideo {
+    background: #f9f9f9;
+}
+
+.main_introvideo .content {
+    display: flex;
+    gap: 30px;
+}
+
+.main_introvideo .content .left .video {
+    width: 720px;
+    height: 380px !important;
+    object-fit: cover;
+}
+
+.main_introvideo .txt {
+    text-align: right;
+}
+
+
+.main_introvideo .txt h3 {
+    position: relative;
+    font-size: 90px;
+    font-weight: 900;
+    color: #f60;
+    margin: 0 0 23px 0;
+}
+
+.main_introvideo .txt h3::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    padding: 40px;
+    background: #ffdcc3;
+    border-radius: 50%;
+
+}
+
+.main_introvideo .txt strong {
+    display: block;
+}
+
+.main_introvideo .txt strong {
+    position: relative;
+}
+
+.main_introvideo .txt p {
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 300;
+    color: #333;
+    margin: 0 0 30px 0;
+}
+
+.main_introvideo .ctr {
+    text-align: right;
+    cursor: pointer;
+}
+
+.main_introvideo .ctr i {
+    padding: 10px;
+    font-size: 18px;
+    color: #f60;
+    background: #fff;
+    border: 1px solid #ffdcc3;
+    border-radius: 5px;
+    margin: 0 5px 0 0;
+}
+
+
+/* -----------------------
+main_masterpiece 메인컨텐츠 추가 마스터피스 
+-----------------------*/
+
+.main_masterpiece {
+    position: relative;
+    background: rgba(255, 102, 0, 0.2);
+    overflow: hidden;
+}
+
+.main_masterpiece::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/mainmaste01.jpg) no-repeat fixed center center/cover;
+    filter: blur(2px);
+    transform: scale(1.2);
+    z-index: -1;
+}
+
+.main_masterpiece .text {
+    text-align: center;
+    color: #fff;
+}
+
+.main_masterpiece h3 {
+    font-size: 40px;
+    font-weight: 100;
+    margin: 0 0 15px 0;
+}
+
+.main_masterpiece strong {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.main_masterpiece p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #ddd;
+    margin: 0 0 40px 0;
+}
+
+.main_masterpiece a {
+    display: inline-block;
+    padding: 10px 50px 8px 50px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.main_masterpiece a:hover {
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+}
+
+
+
+
+/* main_customer */
+/* .main_customer {
+    background: #f9f9f9;
+}
+
+.main_customer .title {
+    position: relative;
+    margin: 0 auto 80px auto;
+}
+
+.main_customer .title::before {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 150px;
+    height: 2px;
+    background: #f60;
+} */
+
+
+
+
+
+/* -----------------------
+main_event 메인컨텐츠 03 뉴스룸 
+-----------------------*/
+.main_event .title {
+    position: relative;
+    margin: 0 auto 80px auto;
+}
+
+.main_event .title::before {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 150px;
+    height: 2px;
+    background: #f60;
+}
+
+.main_event .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin: 0 auto 20px auto;
+}
+
+.main_event .left {
+    width: calc(1200px - (120px * 4));
+    padding: 45px 35px 0 35px;
+    border: 1px solid #ddd;
+}
+
+.main_event .left .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20px 0;
+}
+
+.main_event .left .text h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #f60;
+}
+
+.main_event .left .text a {
+    font-size: 12px;
+}
+
+.main_event .left .text a::after {
+    content: "\e93f";
+    font-family: xeicon;
+    vertical-align: middle;
+}
+
+.main_event .left ul {
+    width: 100%;
+}
+
+.main_event .left ul>li {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+    padding: 0 0 0 15px;
+    font-size: 15px;
+    color: #444;
+    cursor: pointer;
+}
+
+.main_event .left ul>li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ddd;
+    transition: 0.5s;
+}
+
+.main_event .left ul>li:hover::before {
+    background: #f60;
+}
+
+.main_event .left ul>li~li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+}
+
+.main_event .left a {
+    font-size: 14px;
+    color: #999;
+    transition: 0.5s;
+}
+
+.main_event .left li:hover a {
+    color: #f60;
+}
+
+
+.main_event .left li a::after {
+    content: "\e914";
+    font-family: xeicon;
+    vertical-align: middle;
+}
+
+.main_event .right {
+    width: calc(120px * 4);
+}
+
+.main_event .right .itm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.main_event .right .itm li {
+    position: relative;
+    padding: 30px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.main_event .right li strong {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #444;
+    transition: 0.5s;
+}
+
+.main_event .right li:hover strong {
+    color: #f60;
+}
+
+.main_event .right li p {
+    font-size: 14px;
+    line-height: 16px;
+    color: #888;
+}
+
+.main_event .right li span {
+    display: block;
+}
+
+.main_event .right li a {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translate(0, -50%);
+    font-size: 25px;
+
+    color: #999;
+    transition: 0.5s;
+}
+
+.main_event .right li:hover a {
+    color: #f60;
+}
+
+
+.main_event .right .itm li:hover::after {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.main_event .root_daum_roughmap {
+    margin: 0 auto;
+}
+
+
+
+
+
+/* footer */
+.footer {
+    padding: 60px 0;
+    background: #333;
+    color: #999;
+}
+
+.footer .foot_top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 0 0 38px 0;
+}
+
+.footer .foot_list {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+}
+
+.footer .foot_list strong {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ddd;
+}
+
+.footer .foot_list li {
+    position: relative;
+}
+
+.footer .foot_list li~li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 12px;
+    background: #666;
+}
+
+.footer .foot_follow {
+    display: flex;
+    gap: 10px;
+    font-size: 30px;
+}
+
+.footer .foot_top::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #444;
+}
+
+.footer .foot_bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 8px 0;
+
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.footer address {
+    font-style: normal;
+}
+
+.footer .foot_bottom strong {
+    margin: 0 10px 0 0;
+}
+
+.footer .foot_call {
+    text-align: right;
+    font-size: 16px;
+}
+
+.footer .foot_call strong {
+    font-weight: 500;
+}
+
+
+
+
+
+/* to_top */
+.to_top {
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+
+    display: none;
+    cursor: pointer;
+}
+
+.to_top i {
+    font-size: 40px;
+    color: #f60;
+}
